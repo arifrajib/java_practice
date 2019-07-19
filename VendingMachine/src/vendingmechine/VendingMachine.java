@@ -56,42 +56,50 @@ public class VendingMachine {
 	 * 
 	 */
 	private void showStockingMenu() {
-		stockingMenu:
-		while(true) {
-			/**
-			 * Show available Stocking menu
-			 */
-			System.out.println("Please Select from Stocking options");
-			System.out.println("1). Press 1 for add CANDY");
-			System.out.println("2). Press 2 for add SNACK");
-			System.out.println("3). Press 3 for add NUTS");
-			System.out.println("4). Press 4 for add Coke");
-			System.out.println("5). Press 5 for add Pepsi");
-			System.out.println("6). Press 6 for add Soda");
-			System.out.println("........................");
-			System.out.println("0). Press 0 for Return Main menu");
-	
-			/**
-			 * take the decision based on menu choice
-			 */
-			switch(this.scanner.nextInt()){
-				case 0:
-					break stockingMenu;
-				case 1:
-					break;
-				case 2:
-					break;
-				case 3:
-					break;
-				case 4:
-					break;
-				case 5:
-					break;
-				case 6:
-					break;
-				default: 
-			}
-		}
+		/**
+		* Show available Stocking Options
+		*/
+		// add candy to inventory
+		System.out.println("Current Candy Inventory "+this.inventory.getCandy());
+		System.out.println("How many Candy you want to add?");
+		int candy = (int) this.scanner.nextInt();
+		this.inventory.stockCandy(candy);
+		System.out.println("New Candy Inventory "+this.inventory.getCandy());
+			
+		// add Snacks to inventory
+		System.out.println("Current Snacks Inventory "+this.inventory.getSnack());
+		System.out.println("How many Snacks you want to add?");
+		int snacks = (int) this.scanner.nextInt();
+		this.inventory.stockSnack(snacks);
+		System.out.println("New Snacks Inventory "+this.inventory.getSnack());
+
+		// add Nuts to inventory
+		System.out.println("Current Nuts Inventory "+this.inventory.getNuts());
+		System.out.println("How many Nuts you want to add?");
+		int nuts = (int) this.scanner.nextInt();
+		this.inventory.stockNut(nuts);
+		System.out.println("New Nuts Inventory "+this.inventory.getNuts());
+
+		// add Coke to inventory
+		System.out.println("Current Coke Inventory "+this.inventory.getCoke());
+		System.out.println("How many Coke you want to add?");
+		int coke = (int) this.scanner.nextInt();
+		this.inventory.stockCoke(coke);
+		System.out.println("New Coke Inventory "+this.inventory.getCoke());
+			
+		// add Pepsi to inventory
+		System.out.println("Current Pepsi Inventory "+this.inventory.getPepsi());
+		System.out.println("How many Pepsi you want to add?");
+		int pepsi = (int) this.scanner.nextInt();
+		this.inventory.stockPepsi(pepsi);
+		System.out.println("New Pepsi Inventory "+this.inventory.getPepsi());
+
+		// add Soda to inventory
+		System.out.println("Current Soda Inventory "+this.inventory.getSoda());
+		System.out.println("How many Soda you want to add?");
+		int soda = (int) this.scanner.nextInt();
+		this.inventory.stockSoda(soda);
+		System.out.println("New Soda Inventory "+this.inventory.getSoda());
 	}
 	
 	private void showSalesManu() {
@@ -107,8 +115,9 @@ public class VendingMachine {
 			System.out.println("4). Press 4 for buy Coke(25c)");
 			System.out.println("5). Press 5 for buy Pepsi(35c)");
 			System.out.println("6). Press 6 for buy Soda(45c)");
+			//System.out.println("9). Press 9 for pay");
 			System.out.println("........................");
-			System.out.println("0). Press 0 for Return Main menu");
+			System.out.println("0). Press 0 for pay");
 
 			/**
 			 * take the decision based on menu choice

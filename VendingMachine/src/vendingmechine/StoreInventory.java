@@ -32,27 +32,194 @@ class StoreInventory {
 	/**
 	 * Stock Candy
 	 * @param candy
-	 * @return
 	 */
-	int stockCandy(int candy) {
-		return this.candy += candy;
+
+	void stockCandy(int candy) {
+		this.candy += candy;
 	}
 	
 	/**
 	 * 
 	 * @return
 	 */
-	int getCandyStock() {
+	int getCandy() {
 		return this.candy;
+	}
+	
+	/**
+	 * 
+	 * @param candy
+	 * @return
+	 */
+	float sellCandy(int candy) {
+		if(this.candy < candy) {
+			System.out.println("Not enough candy");
+			return 0;
+		}
+		else {
+			this.candy -= candy;
+			return (float) this.candyPerUnit*candy;
+		}
 	}
 	
 	/**
 	 * Stock snacks
 	 * @param snack
+	 */
+	void stockSnack(int snack) {
+		this.snack += snack;
+	}
+	
+	/**
+	 * 
 	 * @return
 	 */
-	int stockSnack(int snack) {
-		return this.snack += snack;
+	int getSnack() {
+		return this.snack;
+	}
+	
+	/**
+	 * 
+	 * @param snack
+	 * @return
+	 */
+	float sellSnack(int snack) {
+		if(this.snack < snack) {
+			System.out.println("Not enough snack");
+			return 0;
+		}
+		else {
+			this.snack -= snack;
+			return (float) this.snackPerUnit*snack;
+		}
+	}
+	
+	/**
+	 * 
+	 * @param nut
+	 */
+	void stockNut(int nut) {
+		this.nuts += nut;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	int getNuts() {
+		return this.nuts;
+	}
+	
+	/**
+	 * 
+	 * @param nuts
+	 * @return
+	 */
+	float sellNuts(int nuts) {
+		if(this.nuts < nuts) {
+			System.out.println("Not enough nuts");
+			return 0;
+		}
+		else {
+			this.nuts -= nuts;
+			return (float) this.nutsPerUnit*nuts;
+		}
+	}
+	
+	/**
+	 * 
+	 * @param coke
+	 */
+	void stockCoke(int coke) {
+		this.coke += coke;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	int getCoke() {
+		return this.coke;
+	}
+	
+	/**
+	 * 
+	 * @param coke
+	 * @return
+	 */
+	float sellCoke(int coke) {
+		if(this.coke < coke) {
+			System.out.println("Not enough coke");
+			return 0;
+		}
+		else {
+			this.coke -= coke;
+			return (float) this.cokePerUnit*coke;
+		}
+	}
+	
+	/**
+	 * 
+	 * @param pepsi
+	 */
+	void stockPepsi(int pepsi) {
+		this.pepsi += pepsi;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	int getPepsi() {
+		return this.pepsi;
+	}
+	
+	/**
+	 * 
+	 * @param pepsi
+	 * @return
+	 */
+	float sellPepsi(int pepsi) {
+		if(this.pepsi < pepsi) {
+			System.out.println("Not enough pepsi");
+			return 0;
+		}
+		else {
+			this.pepsi -= pepsi;
+			return (float) this.pepsiPerUnit*pepsi;
+		}
+	}
+
+	/**
+	 * 
+	 * @param soda
+	 */
+	void stockSoda(int soda) {
+		this.soda += soda;
+	} 
+	
+	/**
+	 * 
+	 * @return
+	 */
+	int getSoda() {
+		return this.soda;
+	}
+	
+	/**
+	 * 
+	 * @param soda
+	 * @return
+	 */
+	float sellSoda(int soda) {
+		if(this.soda < soda) {
+			System.out.println("Not enough soda");
+			return 0;
+		}
+		else {
+			this.soda -= soda;
+			return (float) this.sodaPerUnit*soda;
+		}
 	}
 
 }
