@@ -2,4 +2,5 @@
 .project
 .classpath
 .idea/
-java_practice.iml
+*.iml
+
