@@ -1,10 +1,14 @@
-package w3resource.List;
+package List;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
-public class ListCollection {
-    public void testList(){
+public class ListCollections {
+
+    public static void main (String[] args) {
+        testList();
+    }
+
+    public static void testList(){
         /**
          * Creating New List
          */
@@ -12,7 +16,7 @@ public class ListCollection {
 
         ArrayList<String> list2 = new ArrayList<>();
 
-        var list3 = new ArrayList<String>();
+        List<String> list3 = new ArrayList<String>();
 
         /**
          * Add item
