@@ -1,9 +1,6 @@
 package List;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class PlayWithArrayList {
 
@@ -24,6 +21,9 @@ public class PlayWithArrayList {
         //// Search Elements
         searchItem(country);
 
+
+        //// Sort Item
+        sortTiem(country);
 
         System.out.println("Country ArrayList: " + country);
     }
@@ -78,6 +78,13 @@ public class PlayWithArrayList {
         int notFound = list.indexOf("China");
         System.out.println("Index of China: " + notFound + "\n");
 
+    }
+
+    private static void sortTiem (List<String> list) {
+
+        System.out.println("Before sort: " + list);
+        list.sort(Comparator.naturalOrder());
+        System.out.println("Before dort: " + list + "\n");
     }
 
 
