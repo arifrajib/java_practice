@@ -23,9 +23,17 @@ public class PlayWithArrayList {
 
 
         //// Sort Item
-        sortTiem(country);
+        sortItem(country);
+
+        //// iterate list
+        iterateItem(country);
 
         System.out.println("Country ArrayList: " + country);
+
+
+        //// Remove item from list
+        removeItem ();
+
     }
 
     private static List<String> createArrayList () {
@@ -80,12 +88,49 @@ public class PlayWithArrayList {
 
     }
 
-    private static void sortTiem (List<String> list) {
+    private static void sortItem (List<String> list) {
 
         System.out.println("Before sort: " + list);
         list.sort(Comparator.naturalOrder());
         System.out.println("Before dort: " + list + "\n");
     }
 
+    private static void iterateItem (List<String> list) {
+
+        Iterator<String> iterator = list.iterator();
+        System.out.print("Iterate List [ ");
+        while (iterator.hasNext()) {
+            String str = iterator.next();
+            System.out.print(str + " ");
+        }
+        System.out.print("]" + "\n");
+    }
+
+    private static void removeItem () {
+
+        //// Integer ArrayList
+        List<Integer> list = new ArrayList<>();
+
+        //// Add item to the list
+        for (int i=0; i<10; i++) {
+            list.add(i);
+        }
+
+        //// Initial list
+        System.out.println ("\n\n");
+        System.out.println ("Initial List " + list);
+
+        /// remove 6 from the lsit
+        list.remove(Integer.valueOf(6));
+        System.out.println ("After removing 6 " + list);
+
+        /// remove item for index 3
+        list.remove(3);
+        System.out.println ("After removing index 3 " + list);
+
+        list.clear();
+        System.out.println ("After clear the list " + list);
+
+    }
 
 }
